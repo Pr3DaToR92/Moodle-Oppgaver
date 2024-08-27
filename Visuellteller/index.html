@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VisuellTeller</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+           
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="clock"></div>
+    <button onclick="add()">Pluss</button>
+    <button onclick="subtract()">Minus</button>
+   
+    
+    <script>
+        
+        let clockDiv = document.getElementById('clock');
+        let x = x + y;
+        let y = x - y;
+    
+        function add(){
+            numToShow = x;
+            clockDiv.innerHTML = numToShow;
+            
+        }
+        function subtract(){
+            numToShow = y;
+            clockDiv.innerHTML = numToShow;
+        }
+    </script>
+</body>
+
+</html>

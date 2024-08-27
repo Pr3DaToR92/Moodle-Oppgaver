@@ -1,0 +1,37 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+h3{
+    text-align: center;
+    font-size: 50px;
+}
+.grid-container{
+    display: grid;
+    justify-content: center;
+    grid-template-rows: 80px 80px 80px;
+    grid-template-columns: 80px;
+    gap: 3px;
+
+    
+}
+.button-red{
+    background-color: black;
+    cursor: pointer;
+}
+.button-yellow{
+    background-color: black;
+    cursor: pointer;
+}
+.button-green{
+    background-color: black;
+    cursor: pointer;
+}
+.red > .button-red{
+    background-color: red;
+}
+.yellow{
+    background-color: yellow;
+}
+.green{
+    background-color: green;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StoppeKlokke</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+
+<div id="app">
+    
+    Klokke:
+    <input type="number" maxlength="4">
+    Stoppeklokke:
+    <input name="stopWatch" type="number">
+    
+</div>
+    
+<div>
+    <button type="button" onclick="startClock()">Start Klokke</button>
+    
+    <button type="button" onclick="setTimer()">Start Stoppeklokke</button>
+    <button type="button" onclick="pauseTimer()">Stopp</button>
+    <button type="button" onclick="newTime()">Ny Tid</button>
+    <button type="button" onclick="resetTimer()">Restart</button>
+    
+    
+    <ul >Tid
+
+        <li id="roundList">
+
+        </li>
+    </ul>
+
+</div>
+
+</body>
+
+
+
+<script>
+    const app = document.getElementById('app');
+    const roundTime = document.getElementById('roundList')
+    let seconds = 0;
+    
+    
+    function startClock(){
+        setInterval(countSeconds, 1000);
+        
+    }
+    function countSeconds(){
+            app.innerHTML = seconds;
+            seconds++;
+        }
+    function setTimer(){
+        startClock();
+    }
+
+        // Denne kjører etter xxx antall sekund//
+    function pauseTimer(){
+        roundTime.innerHTML += seconds;
+        clearInterval(countSeconds);
+        seconds = 0;
+        
+    }
+
+    function newTime(){
+        roundTime.innerHTML += seconds;
+        clearInterval(countSeconds);
+        seconds == 0;
+    }
+        //Bra måte å resette siden på(app er lagt til kun for å vite at den tar hele "appen").//
+    
+    function resetTimer(){
+    location.reload("app")
+    }
+</script>
+</html>
