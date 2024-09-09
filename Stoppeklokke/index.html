@@ -29,11 +29,9 @@
     <button type="button" onclick="resetTimer()">Restart</button>
     
     
-    <ul >Tid
+    <ul id="li">Tid
 
-        <li id="roundList">
-
-        </li>
+      
     </ul>
 
 </div>
@@ -44,12 +42,15 @@
 
 <script>
     const app = document.getElementById('app');
-    const roundTime = document.getElementById('roundList')
+    
     let seconds = 0;
-    
-    
+    let interval;
+
+    document.createElement ("li")
+
+
     function startClock(){
-        setInterval(countSeconds, 1000);
+        interval = setInterval(countSeconds, 1000);
         
     }
     function countSeconds(){
@@ -57,21 +58,26 @@
             seconds++;
         }
     function setTimer(){
-        startClock();
+        interval = setInterval(countSeconds, 1000);
     }
 
         // Denne kjører etter xxx antall sekund//
     function pauseTimer(){
+        let roundTime = document.createElement('li')
+        document.getElementById ("li").appendChild(roundTime)
         roundTime.innerHTML += seconds;
-        clearInterval(countSeconds);
-        seconds = 0;
+        clearInterval(interval);
+        seconds = roundTime.innerText;
         
     }
 
     function newTime(){
+        let roundTime = document.createElement('li')
+        document.getElementById ("li").appendChild(roundTime)
         roundTime.innerHTML += seconds;
-        clearInterval(countSeconds);
-        seconds == 0;
+        clearInterval(interval);
+        seconds =0;
+        interval;
     }
         //Bra måte å resette siden på(app er lagt til kun for å vite at den tar hele "appen").//
     

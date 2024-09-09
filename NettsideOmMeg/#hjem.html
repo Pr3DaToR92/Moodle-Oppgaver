@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javaTest</title>
-
-<style>
+    <title>NettsideOmMeg</title>
     
+<style>
+        /* Inspirasjon hentet fra w3schools.com*/
         body {
             font-family: Arial, Helvetica, sans-serif;
             margin: 0;
@@ -74,13 +74,30 @@
 
 
         }
+
+        
 </style>
 </head>
 <body>
+
+    <div>
+        <hr>
+        
+        <video id="playVideo" width="480" height="480" preload="auto" muted>
+            <source src="Media/video1.mp4" type="video/mp4">
+          </video>
+        
+        <audio id="playAudio" preload="auto">
+            <source src="Media/getoverhere.mp3" type="audio/mp3">
+            <source src="Media/getoverhere.ogg" type="audio/ogg"> 
+        </audio>
+        
+        <button onclick="playAll()" type="button">PLAY</button>
+    </div>
     
     <ul>
-        <li><a href="#hjem.html" target="_self">Hjem</a></li>
-        <li><a class="active" href="#nyheter.html" target="_self">Nyheter</a></li>
+        <li><a class="active" href="#hjem.html" target="_self">Hjem</a></li>
+        <li><a href="#nyheter.html" target="_self">Nyheter</a></li>
         <li><a href="#kontakt.html" target="_self">Kontakt</a></li>
         <li style="float:right;"><a href="#om">Om</a></li>
     </ul>
@@ -95,6 +112,24 @@
     <table2>
 
     </table2>
+    <script>
+
+        //Deklarer at vid og aud er mine media filer//
+        let vid = document.getElementById ("playVideo");
+        let aud = document.getElementById ("playAudio");
+        
+        // Denne funksjonen kjører begge samtidig i en "play" knapp.//
+        function playAll(){
+            vid.play();
+            aud.play();
+        }
+        //Model
+
+        //View
+        
+        //Controllers
+        
+    </script>
 
 </body>
 

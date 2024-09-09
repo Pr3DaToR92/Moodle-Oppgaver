@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>javaTest</title>
+    <title>OmMeg</title>
 
 <style>
     
@@ -77,12 +77,28 @@
 </style>
 </head>
 <body>
+
+    <div>
+        <p>Flotte meg</p>
+        
+        <video id="playVideo" width="320" height="176" controls muted>
+            <source src="Media/video1.mp4" type="video/mp4">
+            <source src="Media/getoverhere.mp3" type="audio/mp3">
+            <iframe src="Media/getoverhere.mp3" frameborder="0"></iframe>
+        </video>
+        
+        <audio id="playAudio">
+            <source src="Media/getoverhere.mp3" type="audio/mp3">
+        </audio>
+        
+        <button type="button" onclick="play">PLAY</button>
+    </div>
     
     <ul>
-        <li><a class="active" href="#hjem.html" target="_self">Hjem</a></li>
+        <li><a href="#hjem.html" target="_self">Hjem</a></li>
         <li><a href="#nyheter.html" target="_self">Nyheter</a></li>
         <li><a href="#kontakt.html" target="_self">Kontakt</a></li>
-        <li style="float:right;"><a href="#om">Om</a></li>
+        <li style="float:right;"><a class="active" href="#om" target="_self">Om</a></li>
     </ul>
     <footer>
         Laget av Kevin Tunge

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tastatur med This kodeord</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div>
+        <input type="text" onchange="saveText(this.innerText)">
+        <hr>
+        <button onclick="saveText(this)">Hei</button>
+        <button onclick="saveText(this)">Hade</button>
+        <button onclick="saveText(this)">God dag</button>
+        <button onclick="saveText(this)">Velkommen</button>
+    </div>
+</body>
+<script>
+    let htmlElement;
+
+    function saveText(htmlElement){
+        let saveText = htmlElement.innerText;
+        htmlElement.innerText;
+        console.log (saveText);
+    }
+    function addText(htmlElement){
+        htmlElement.innerText;
+        console.log (addText);
+    }
+      
+</script>
+
+
+
+</html>
